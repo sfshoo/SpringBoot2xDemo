@@ -1,4 +1,4 @@
-package com.example.SpringBoot2xDemo.Model;
+package com.example.SpringBoot2xDemo;
 
 public class Order {
 

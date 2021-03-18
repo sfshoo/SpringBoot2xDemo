@@ -11,10 +11,10 @@ limit:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/springboot2xdemo
+    url: jdbc:mysql://127.0.0.1:3306/springboot2xdemo?characterEncoding=utf-8
     username: root
     password: 123456
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true

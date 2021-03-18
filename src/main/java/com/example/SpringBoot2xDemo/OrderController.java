@@ -1,6 +1,5 @@
-package com.example.SpringBoot2xDemo.Controller;
+package com.example.SpringBoot2xDemo;
 
-import com.example.SpringBoot2xDemo.Model.Order;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
