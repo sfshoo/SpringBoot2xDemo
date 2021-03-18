@@ -7,3 +7,14 @@ limit:
   minMoney: 0.1
   maxMoney: 9999
   description: 最少${limit.minMoney}元,最多${limit.maxMoney}
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot2xdemo
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true

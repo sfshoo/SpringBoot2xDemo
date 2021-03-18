@@ -3,13 +3,17 @@ package com.example.SpringBoot2xDemo.Controller;
 import com.example.SpringBoot2xDemo.LimitConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 
+/**
+ * @Controller + @ResponseBody = @RestController
+ */
+
 @RestController
+@RequestMapping("/hello")
 public class HelloWorldController {
 
     private LimitConfig limitConfig;
@@ -19,9 +23,12 @@ public class HelloWorldController {
         this.limitConfig = limitConfig;
     }
 
-    @GetMapping("hello")
-    public String Hello() {
-        return "Hello Spring Boot! 说明:"+ limitConfig.getDescription();
+//    @GetMapping("/say")
+    @PostMapping("/say")
+//    @RequestMapping("/say")
+    public String Hello(@RequestParam(value = "id", required = false, defaultValue = "0") Integer id) {
+//        return "说明:" + limitConfig.getDescription();
+        return "id:" + id;
     }
 
 }
